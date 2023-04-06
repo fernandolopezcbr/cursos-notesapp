@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <nav id="navbar" class="navbar navbar-expand-lg text-light">
+        <div class="container">
+            <h5 class="mx-auto text-light">NOTAS</h5>
+        </div>
+    </nav>
+
+    <div id="alert" class="alert alert-danger alert-dismissible fade show mt-3 mb-3 mx-auto" role="alert">
+        <strong id="title-alert">¡ATENCIÓN! </strong>No puedes dejar campos en blanco
+        <button type="button" class="btn-close" id="btn-alert" data-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+
+    <div class="container mt-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 justify-content-center">
+
+            <!-- FORMULARIO NOTAS -->
+            <div class="col mb-3">
+                <div class="card">
+                    <div class="card-header text-light">
+                        Nueva nota
+                    </div>
+                    <form>
+                        <div class="card-body">
+
+
+                            <select name="format" id="curso" class="form-control mb-3" required>
+                                <option selected disabled>Selecciona curso</option>
+                                <option value="algebra lineal">Algebra lineal</option>
+                                <option value="dibujo cad">Dibujo Cad</option>
+                                <option value="electronica digita">Electronica Digital</option>
+                                <option value="fisica ii">Fisica II</option>
+                                <option value="matematicas iii">Matematicas III</option>
+                            </select>
+
+                            <input type="text" class="form-control mb-3" placeholder="Título" id="title" required>
+                            <textarea class="form-control" name="comments" cols="50" rows="6 " placeholder="Escribe tus comentarios"
+                            title="Tu comentario no debe exceder los 500 caracteres" data-pattern="^.{1,500}$" id="description" required></textarea>
+                            <h6>url para drive: https://drive.google.com/uc?export=download&id=</h6>
+                            <input type="text" class="form-control mb-3" placeholder="url imagen" id="imagenuno" >
+                            <input type="text" class="form-control mb-3" placeholder="url imagen 2" id="imagendos">
+                            <textarea class="form-control" name="comments" cols="50" rows="6 " placeholder="Escribe tus comentarios"
+                            title="Tu comentario no debe exceder los 500 caracteres" data-pattern="^.{1,500}$" id="contenido"></textarea>
+                            <input type="text" class="form-control mb-3" placeholder="imagen como ejemplo" id="imagenejemplo">
+                            <input type="url" class="form-control mb-3" placeholder="ingresa una URL(material de apoyo)" id="materialapoyo">
+
+
+
+                        
+                            </div>
+                        <div class="card-footer" id="footer">
+                            <button type="submit" class="btn btn-primary" id="btn">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col">
+
+                <div class="card">
+                    <div class="card-header text-light">
+                        Notas
+                    </div>
+                    <div class="card-body" id="show-notes">
+                        <p id="message"></p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="content-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <script src="js/newNote.js"></script>
+    <script src="js/getNotes.js"></script>
+
+
+</body>
+
+</html>
