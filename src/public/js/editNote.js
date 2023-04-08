@@ -41,7 +41,7 @@ const description = document.getElementById('description');
 
 
 curso.value = categoriaParam;
-imagenuno.value = imagenParam;
+imagenuno.value = imagenunoParam;
 imagendos.value = imagendosParam;
 imagenejemplo.value = imagenejemploParam;
 contenido.textContent = contenidoParam;
