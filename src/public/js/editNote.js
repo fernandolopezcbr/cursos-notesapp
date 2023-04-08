@@ -10,7 +10,7 @@ var id = urlParams.get('id');
 
 
 var categoriaParam = urlParams.get('curso'),
-imagenParam = urlParams.get('imagenuno'),
+imagenunoParam = urlParams.get('imagenuno'),
 imagendosParam = urlParams.get('imagendos'),
 imagenejemploParam = urlParams.get('imagenejemplo'),
 contenidoParam = urlParams.get('contenido'),
@@ -63,7 +63,7 @@ update.onclick = () => {
 
     
     const categoriaValue = curso.value,
-     imagenValue = imagenuno.value,
+     imagenunoValue = imagenuno.value,
      imagendosValue = imagendos.value,
      imagenejemploValue = imagenejemplo.value,
      contenidoValue = contenido.value,
@@ -73,10 +73,10 @@ update.onclick = () => {
     const titleValue = title.value;
     const descriptionValue = description.value;
 
-    if ( categoriaValue == '' || imagenValue == '' || imagendosValue == '' || imagenejemploValue == '' || contenidoValue == '' ||  materialapoyoValue == '' ||titleValue == '' || descriptionValue == '') {
+    if ( categoriaValue == '' || imagenunoValue == '' || imagendosValue == '' || imagenejemploValue == '' || contenidoValue == '' ||  materialapoyoValue == '' ||titleValue == '' || descriptionValue == '') {
         $("#alert-edit").show();
     } else {
-        updateData(id , categoriaValue, imagenValue, imagendosValue, imagenejemploValue, contenidoValue, materialapoyoValue, titleValue, descriptionValue);
+        updateData(id , categoriaValue, imagenunoValue, imagendosValue, imagenejemploValue, contenidoValue, materialapoyoValue, titleValue, descriptionValue);
         window.location.href = '/';
     }
 
